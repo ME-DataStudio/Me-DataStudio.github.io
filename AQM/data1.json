@@ -1,8 +1,6 @@
-{"events":[
-  {"month":"January","val1":10,"val2":20,"val3":15},
-  {"month":"February","val1":25,"val2":15,"val3":10},
-  {"month":"March","val1":13,"val2":28,"val3":20},
-  {"month":"April","val1":18,"val2":22,"val3":25},
-  {"month":"May","val1":30,"val2":10,"val3":12}
-]
+
+{"labels":['January', 'February', 'March', 'April', 'May'],
+ "dataset1":[10, 25, 13, 18, 30],
+ "dataset2":[20, 15, 28, 22, 10],
+ "dataset3":
 }
