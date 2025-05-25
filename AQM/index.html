@@ -31,19 +31,16 @@
         // data for showing the line chart
       fetch('https://jsonplaceholder.typicode.com/users/1')
       .then(response => response.json())
-      .then(data =>  {
-        let labels = data.labels
-        let datasets1Data = data.dataset1
-        let dataset2Data = data.dataset2
-        let dataset3Data = data.dataset3
-      })
+      .then(data =>  {const chartdata = data;})
+        
+        
         // Creating line chart
         let ctx = 
             document.getElementById('myLineChart').getContext('2d');
         let myLineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: labels,
+                labels: chardata.labels,
                 datasets: [
                     {
                         label: 'Solid Line',
