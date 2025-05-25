@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" 
@@ -14,32 +13,27 @@
             margin: 20px;
             text-align: center;
         }
-
         h1 {
             color: green;
         }
-
         canvas {
             border: 2px solid #858080;
         }
     </style>
-
 </head>
-
 <body>
-
     <h1>GeeksForGeeks</h1>
     <h2>Line Chart Example - Simple</h2>
-
     <canvas id="myLineChart" 
             width="380" height="180">
-      </canvas>
-
+    </canvas>
     <script>
         // data for showing the line chart
       fetch('https://jsonplaceholder.typicode.com/users/1')
       .then(response => response.json())
-      .then(data => {
+      .then(data => saveIt(data)) 
+        
+      let saveIt = (data) => {
         let lebels = data.labels
         let datasets1Data = data.dataset1
         let dataset2Data = data.dataset2
