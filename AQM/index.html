@@ -27,11 +27,10 @@
     <canvas id="myLineChart" 
             width="380" height="180">
     </canvas>
+    <script src="data1.js"></script>
     <script>
         // data for showing the line chart
-      fetch('https://jsonplaceholder.typicode.com/users/1')
-      .then(response => response.json())
-      .then(data =>  {const chartdata = data;
+        
         
         
         // Creating line chart
@@ -40,25 +39,25 @@
         let myLineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: chartdata.labels,
+                labels: data.labels,
                 datasets: [
                     {
                         label: 'Solid Line',
-                        data: dataset1Data,
+                        data: data.dataset1,
                         borderColor: 'blue',
                         borderWidth: 2,
                         fill: false,
                     },
                     {
                         label: 'Solid Line',
-                        data: dataset2Data,
+                        data: data.dataset2,
                         borderColor: 'red',
                         borderWidth: 2,
                         fill: false,
                     },
                     {
                         label: 'Solid Line',
-                        data: dataset3Data,
+                        data: data.dataset3,
                         borderColor: 'green',
                         borderWidth: 2,
                         fill: true,
