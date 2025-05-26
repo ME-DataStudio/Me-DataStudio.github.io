@@ -1,5 +1,6 @@
-
-{"labels":["January", "February", "March", "April", "May"],
+var data = 
+{
+ "labels":["January", "February", "March", "April", "May"],
  "dataset1":[10, 25, 13, 18, 10],
  "dataset2":[20, 15, 28, 22, 10],
  "dataset3":[15, 10, 20, 25, 12]
