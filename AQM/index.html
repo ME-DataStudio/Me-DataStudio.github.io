@@ -30,8 +30,9 @@
     <script src="data1.js"></script>
     <script>
         // data for showing the line chart
-        
-        
+        buff = new Buffer(data);
+        base64data = buff.toString('bas64');
+        console.log('"' + data + '" to Base64 is "' + base64data + '"');
         
         // Creating line chart
         let ctx = 
