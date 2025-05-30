@@ -31,41 +31,6 @@
     <script>
         // data for showing the line chart
         //const base64EncodedString = btoa(JSON.stringify(data));
-        async function upload() {
-  const message = 'amogus';
-  const content = 'aaaaa';
-  const owner = 'me-datastudio';
-  const repo = 'me-datastudio.github.io';
-  const path = 'amogus.html';
-  const auth = '';
-
-  const existingFile = await (await fetch(
-    `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
-    {
-      method: 'GET',
-      headers: {
-        Accept: 'application/vnd.github+json',
-        Authorization: `Bearer ${auth}`
-      }
-    }
-  )).json();
-
-  await (await fetch(
-    `https://api.github.com/repos/${owner}/${repo}/contents/${path}`,
-    {
-      method: 'PUT',
-      headers: {
-        Accept: 'application/vnd.github+json',
-        Authorization: `Bearer ${auth}`
-      },
-      body: JSON.stringify({
-        message: message,
-        content: btoa(content),
-        sha: existingFile.sha,
-      }),
-    }
-  )).json();
-}
         // Creating line chart
         let ctx = 
             document.getElementById('myLineChart').getContext('2d');
